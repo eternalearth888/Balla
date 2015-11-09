@@ -6,13 +6,13 @@ import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
 public class SplashBalla extends JFrame {
-	public ImageIcon splash = createImageIcon("/images/ball.png");
+	public ImageIcon splash = createImageIcon("/images/logo.png");
 	private JLabel image = new JLabel(splash);
 	
 	
 	public SplashBalla() {
 		getContentPane().add(image);
-		setSize(500, 313);
+		setSize(500, 250);
 		setUndecorated(true);
 		setLocationRelativeTo(null);
 		setVisible(true);
