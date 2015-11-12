@@ -23,6 +23,9 @@ class Player {
 		case "SF":
 			setPosition(Positions.SF);
 			break;
+		case "C":
+			setPosition(Positions.C);
+			break;
 		default:
 			break;
 		}
