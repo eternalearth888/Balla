@@ -9,24 +9,22 @@ import javax.swing.JFileChooser;
 public class RunMe {
 
 	public RunMe() {
-		fileLocation();
+
 	}
 
 	public String fileLocation() {
-		JFileChooser fileChooser = new JFileChooser();
-		File selectedFile = null;
-
-		fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+		JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + File.separator + "Desktop");
 		int result = fileChooser.showOpenDialog(null);
 		if (result == JFileChooser.APPROVE_OPTION) {
+			File selectedFile = null;
 			selectedFile = fileChooser.getSelectedFile();
-			//System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+			System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+			return selectedFile.getAbsolutePath();
 		}
-		return selectedFile.getAbsolutePath();
+		throw new IllegalStateException("What is the point if you don't pick a file");
 	}
 
-	public static void main(String[] args) throws FileNotFoundException,IOException {
-		@SuppressWarnings("unused")
+	public static void main(String[] args) throws FileNotFoundException, IOException {
 		SplashBalla start = new SplashBalla();
 
 		BuildCombos calculate = new BuildCombos(new RunMe().fileLocation());

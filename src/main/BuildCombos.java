@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BuildCombos {
-	
-	public BuildCombos(String fileLocation) throws FileNotFoundException, IOException{
+
+	public BuildCombos(String fileLocation) throws FileNotFoundException, IOException {
 		File file = new File(fileLocation);
-		
+
 		List<Player> playerList = new ArrayList<>();
 
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -24,8 +24,6 @@ public class BuildCombos {
 		}
 
 		Team teamCombos = new Team();
-		teamCombos.CreateTeam(playerList);
-
-		System.out.print(teamCombos);
+		teamCombos.CreateListofTeams(playerList);
 	}
 }

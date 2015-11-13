@@ -37,7 +37,7 @@ class Player {
 
 	@Override
 	public String toString() {
-		return "Balla [position=" + getPosition() + ", average=" + average
+		return "Player [position=" + getPosition() + ", average=" + average
 				+ ", salary=" + salary + ", name=" + name + "]";
 	}
 
@@ -47,6 +47,18 @@ class Player {
 
 	public void setPosition(Positions position) {
 		this.position = position;
+	}
+	
+	public double getAverage() {
+		return average;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public String getName() {
+		return name;
 	}
 }
 
